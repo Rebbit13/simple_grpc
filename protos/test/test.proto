@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package test;
+option go_package = "https://gitlab.plutoview.com/backend/go_container_engine/api/grpc/container_engine/gen";
+
+service TestService {
+  rpc hello(Settings) returns (Greetings) {}
+}
+
+message Settings {
+  string name = 1;
+}
+
+message Greetings {
+  string name = 1;
+}
